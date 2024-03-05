@@ -1,0 +1,35 @@
+// 语法相关的编译器选项
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es5",
+    "lib": ["ESNext", "DOM", "ES2018"],
+    "jsx": "preserve",
+    "experimentalDecorators": true,
+    "jsxFragmentFactory": "Fragment",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["packages/*"]
+    },
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true, // 选项会自动从项目中的 ts 和 js 文件生成 .d.ts 声明文件
+    "sourceMap": true,
+    // ?开启该选项，一些低版本降级操作会从 tslib 中导入。
+    // ?如果你的 target 编译目标使用的是 ES5 这种较低版本，但语法中出现了 ES6 或更新的语法
+    // ?那么会抛出该报错{This syntax requires an imported helper but module 'tslib' cannot be found}
+    // todo 通过执行 npm install -D tslib@latest 来解决这个问题
+    // ? tslib 是把一系列的降级代码（函数）抽离并合并导出的库。目的是降低编译后代码的数量，起到压缩代码体积的作用
+    "importHelpers": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictFunctionTypes": false,
+    "skipLibCheck": true
+  }
+}

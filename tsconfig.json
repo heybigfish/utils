@@ -1,0 +1,15 @@
+// 工程环境配置
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "lib", // 指定了输出目录，编译后的 js、.d.ts 声明文件等都会打包到 lib 文件夹内
+    "rootDir": "packages", // 指定了根目录，该目录下的文件结构会在打包的目录中得到保留，后续所有开发的 utils 都要放在这个文件夹中
+    "jsxFactory": "Vue.createElement", // Specify the jsxFactory option
+    "jsxFragmentFactory": "Vue.Fragment" // Specify the jsxFragmentFactory option
+  },
+  // 指定需要编译处理的文件列表，解析路径相对于当前项目的 tsconfig.json 文件位置
+  "include": [
+    "packages/**/*.ts",
+    "packages/**/*.tsx"
+  ]
+}

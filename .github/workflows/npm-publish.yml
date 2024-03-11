@@ -103,7 +103,7 @@ jobs:
           npm publish
         env:
           # 配置 npm access token 环境变量
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_ACCESS_TOKEN}}
 
       - name: 刷新缓存
         run: |

@@ -108,3 +108,5 @@ jobs:
       - name: 刷新缓存
         run: |
           curl https://purge.jsdelivr.net/npm/iemotion-pic@latest/lib/name.json
+permissions:
+  contents: write

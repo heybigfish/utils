@@ -4,8 +4,8 @@
 name: NPM_TOKEN
 
 on:
-  release:
-    types: [created]
+  push:
+    branches: ['main']
 
 jobs:
   # 创建了一个名叫 'build' 的 job

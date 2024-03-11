@@ -51,5 +51,8 @@
     "packages/**/*.ts": [
       "npm run lint:eslint"
     ]
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
